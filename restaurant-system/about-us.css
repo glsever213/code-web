@@ -1,0 +1,244 @@
+/* Import font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Import font Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+ /* #004666 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    height: auto;
+}
+p {
+    color: #afaeae;
+    text-decoration: none;
+    font-family: Roboto, san;
+    font-weight: 500;
+}
+h1, h2 {
+    font-size: 2.2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+.logo {
+    width: 12%;
+    height: auto;
+}
+.logo-img, .user-img, .cart-img, .facebook-img, .twitter-img, .linkedin-img{
+    width: 100%;
+    height: auto;
+}
+
+/**** Header ****/
+.header {
+    background-color: #004666;
+}
+.product-item {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nav left */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.items ul{
+    display: flex;
+    gap: 20px;
+}
+.items ul li a{
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+}
+.items ul li a:hover{
+    color: #ffffff9f;
+}
+
+/* nav right */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: right;
+}
+.user-icon, .cart {
+    width: 25%;
+    height: 25%;
+}
+/* end nav right */
+
+/**** end Header ****/
+
+/**** main ****/
+.main {
+    width: 100%;
+    margin-top: 20px;
+}
+/* about-us section */
+iframe {
+    width: 100%;
+}
+
+.about-us {
+    width: 100%;
+    height: 650px;
+}
+.about-us-inner {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+.restaurant-map {
+    width: 100%;
+}
+.about-us-restaurant {
+    width: 100%;
+}
+.about-us-restaurant {
+    height: 417px;
+    overflow-y: scroll;
+}
+.restaurant-context{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
+}
+/* restaurant location info */
+.restaurant-location-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    line-height: 30px;
+    width: 98%;
+    height: auto;
+    border: 2px solid #afaeae;
+    border-radius: 5px;
+    transition: border 0.3s;
+    margin-bottom: 10px;
+    
+}
+.restaurant-location-info:hover {
+    border: 2px solid #004666;
+}
+.location-icon img {
+    width: 100%;
+}
+.location-icon {
+    width: 6%;
+}
+/* end restaurant location info */
+
+/* end about-us section */
+
+/**** end main ****/
+
+/**** footer ****/
+footer {
+    width: 100%;
+    background-color: #004666;
+}
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+/* footer-left */
+.footer-left, .footer-middle, .footer-right {
+    width: 400px;
+}
+.footer-left {
+    width: 400px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.footer-logo {
+    width: 33%;
+    height: auto;
+}
+.hotline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.hotline-text {
+    color: #FFFFFF;
+}
+.hotline-number {
+    color: #FFC107;
+    font-size: 4rem;
+}
+/* end footer-left */
+
+/* footer-middle */
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+.office-list p{
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+.office-content, .contact-info-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.office-info, .office-name p {
+    color: #afaeae;
+}
+/* end footer-middle */
+
+/* footer-right */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.about-us-text p{
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+.about-us-link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.about-us-link a {
+    width: 10%;
+}
+/* end footer-right */
+/**** end footer ****/

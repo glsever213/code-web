@@ -1,0 +1,123 @@
+/* Import font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Import font Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+ /* #004666 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+p {
+    color: #000000;
+    text-decoration: none;
+    font-family: Roboto, san;
+}
+h1 {
+    font-size: 4rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+label {
+    font-size: 2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    list-style: none;
+    color: #004666;
+    font-family: Roboto, san;
+    border-bottom: 1px solid #004666;
+}
+.logo-img{
+    width: 100%;
+    height: auto;
+}
+input {
+    border-width: 0;
+    font-family: Roboto, san;
+    font-size: 1.6rem;
+    color: #afaeae;
+}
+i {
+    cursor: pointer;
+}
+/* xử lý form đăng nhập */
+.login-text {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.home-logo {
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    width: 150px;
+    height: auto;
+    border-bottom: 0;
+}
+.login-container {
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+    border-radius: 8px;
+    gap: 10px;
+    padding: 20px 0;
+}
+.login-form {
+    width: 90%;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+}
+.form-group #email, .password-input-wrapper {
+    padding: 20px;
+    border: 1px solid #afaeae;
+    border-radius: 8px;
+}
+.password-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#password {
+    width: 100%;
+}
+.link-group {
+    display: flex;
+    justify-content: right;
+    padding: 10px 0;
+}
+.btn-login {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #E31837;
+    border-width: 0;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+}

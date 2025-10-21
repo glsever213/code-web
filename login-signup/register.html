@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Oishi | home</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <!-- <header class="header">
+        <nav class="product-item">
+            <div class="nav-left">
+                <a href="/home/home.html" class="logo">
+                    <img src="./img-login-signup/logo.png" alt="logo" class="logo-img">
+                </a>
+                <div class="items">
+                    <ul>
+                        <li><a href="#">THỰC ĐƠN</a></li>
+                        <li><a href="/restaurant-system/about-us.html">HỆ THỐNG NHÀ HÀNG</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="user-icon">
+                    <img src="./img-login-signup/user.png" alt="user-icon" class="user-img">
+                </a>
+                <a href="#" class="cart">
+                    <img src="./img-login-signup/cart.png" alt="cart" class="cart-img">
+                </a>
+            </div>
+        </nav>
+    </header> -->
+    
+    <div class="home-logo">
+        <a href="/home/home.html" class="logo">
+            <img src="./img-login-signup/logo.png" alt="logo" class="logo-img">
+        </a>
+    </div>
+    <div class="register-text">
+        <h1>TẠO TÀI KHOẢN</h1>
+    </div>
+    <div class="register-container">
+        <form action="#" method="POST" class="register-form">
+            <div class="form-group">
+                <label for="name">Tên *</label>
+                <input type="text" id="name" name="user-name" 
+                    placeholder="Nhập tên của bạn" required>
+            </div>
+            <div class="form-group">
+                <label>Ngày sinh *</label>
+                <div class="date-select-group">
+                    <select name="birth-year" required>
+                        <option value="">Năm</option>
+                    </select>
+                    <select name="birth-month" required>
+                        <option value="">Tháng</option>
+                    </select>
+                    <select name="birth-day" required>
+                        <option value="">Ngày</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Giới tính *</label>
+                <select name="gender" required>
+                    <option value="" disabled selected hidden>Chọn giới tính</option>
+                    <option value="male">Nam</option>
+                    <option value="female">Nữ</option>
+                    <option value="other">Khác</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại *</label>
+                <div class="phone-input-group">
+                    <span class="country-code">+84</span>
+                    <input type="tel" name="phone-number"
+                        placeholder="Nhập số điện thoại" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="user-email" 
+                    placeholder="Nhập địa chỉ email của bạn" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu *</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="password" name="user-password" 
+                        placeholder="Vui lòng nhập mật khẩu của bạn" required>
+                    <i class="fas fa-eye password-toggle" data-target="password"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Xác nhận mật khẩu *</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="confirm-password" name="confirm-password"
+                        placeholder="Nhập lại mật khẩu của bạn" required>
+                    <i class="fas fa-eye password-toggle" data-target="confirm-password"></i>
+                </div>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="newsletter" name="receive-newsletter">
+                <label for="newsletter">
+                    Tôi đồng ý nhận tin tức về Food Oishi qua email và số điện thoại đã đăng ký
+                </label>
+            </div>
+            <button type="submit" class="btn-register">Đăng ký</button>
+        </form>
+        <div class="login-link">
+            <p>Đã có tài khoản? <a href="./login.html">Đăng nhập</a></p>
+        </div>
+    </div>
+    <!-- <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <a href="/home/home.html" class="footer-logo">
+                    <img src="./img-login-signup/logo.png" alt="logo" class="logo-img">
+                </a>
+                <div class="hotline">
+                    <p class="hotline-text"><i class="fa-solid fa-phone"></i>Hotline Đặt Hàng</p>
+                    <p class="hotline-number">1900 6099</p>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="office-list">
+                    <p>VĂN PHÒNG ĐẠI DIỆN</p>
+                </div>
+                <div class="office-content">
+                    <div class="office-name">
+                        <p>CÔNG TY LIÊN DOANH TNHH FOOD OISHI</p>
+                    </div>
+                    <div class="contact-info-description">
+                        <p class="office-info">Số 292 Bà Triệu, P. Lê Đại Hành, Q. Hai Bà Trưng, TP. Hà Nội.</p>
+                        <p class="office-info">Email: lienhe@gmail.com.vn</p>
+                        <p class="office-info">Điện thoại: (028) 38489828</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="about-us-text">
+                    <p>Kết nối với Food Oishi tại các nền tảng</p>
+                </div>
+                <div class="about-us-link">
+                    <a href="#">
+                        <img src="./img-login-signup/facebook.png" alt="facebook" class="facebook-img">
+                    </a>
+                    <a href="#">
+                        <img src="./img-login-signup/twitter.png" alt="twitter" class="twitter-img">
+                    </a>
+                    <a href="#">
+                        <img src="./img-login-signup/linkedin.png" alt="linkedin" class="linkedin-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+</body>
+</html>

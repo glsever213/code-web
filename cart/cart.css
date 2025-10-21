@@ -1,0 +1,378 @@
+/* Import font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Import font Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+ /* #004666 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+p {
+    color: #000000;
+    text-decoration: none;
+    font-family: Roboto, san;
+}
+h1 {
+    font-size: 2.2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+.logo {
+    width: 12%;
+    height: auto;
+}
+.logo-img, .user-img, .cart-img, .facebook-img, .twitter-img, .linkedin-img{
+    width: 100%;
+    height: auto;
+}
+
+/**** Header ****/
+.header {
+    background-color: #004666;
+}
+.product-item {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nav left */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.items ul{
+    display: flex;
+    gap: 20px;
+}
+.items ul li a{
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+}
+.items ul li a:hover{
+    color: #ffffff9f;
+}
+
+/* nav right */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: right;
+}
+.user-icon, .cart {
+    width: 25%;
+    height: 25%;
+}
+/* end nav right */
+/**** end Header ****/
+
+/**** main ****/
+.main {
+    flex-grow: 1; /*đẩy thằng footer xuống hẳn, tránh bị khoảng trắng*/
+    margin-bottom: 50px;
+}
+/* cart section */
+.cart-section {
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+}
+.cart-section-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.cart-section-header {
+    margin: 30px 0;
+    height: auto;
+}
+hr {
+    background-color: #FFFFFF;
+    opacity: 0.4;
+    margin-top: 10px;
+}
+.cart-list {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.cart-item {
+    width: 100%;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+.cart-item-img{
+    width: 20%;
+    height: auto;
+    border-radius: 8px;
+}
+.cart-item-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.cart-item-title {
+    padding: 10px 10px;
+}
+.cart-item-title a{
+    color: #000000;
+    font-family: Roboto, san;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.cart-item-title a:hover{
+    color: #004666;
+}
+
+/* cart-item-col */
+.cart-item-col {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* end cart-item-col */
+/* cart-item-col1 */
+.cart-item-col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.cart-item-col1 p{
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+.delete-cart a {
+    font-size: 2rem;
+    font-family: Roboto, san;
+    color: #0078AE;
+    font-weight: 800;
+    transition: color 0.3s;
+}
+.delete-cart a:hover {
+    color: #014f74;
+}
+/* end cart-item-col1 */
+
+/* cart-item-col2 */
+.cart-item-col2 {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.item-price p {
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+/* xử lý số lượng */
+.item-quantity {
+    display: flex;
+}
+.minus, .item-number, .plus {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dfe4ea;
+    background-color: #dfe4ea62;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.minus:hover, .plus:hover {
+    background-color: #dfe4ea;
+}
+.item-number {
+    background-color: white;
+    opacity: 1;
+}
+/* end cart-item-col2 */
+/* end cart section */
+
+/* cart payment section */
+.cart-payment {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+}
+.cart-payment-inner {
+    width: 35%;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin-top: -70px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cart-quantity-total, .total-price {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-quantity-total p:nth-child(1), .total-price p:nth-child(1){
+    font-size: 2rem;
+    color: #6C757D;
+}
+.cart-quantity-total p:nth-child(2), .total-price p:nth-child(2){
+    font-size: 2rem;
+    color: #000000;
+    font-weight: 800;
+}
+.payment-button button{
+    width: 100%;
+    padding: 15px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: #E31837;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.payment-button button:hover{
+    background-color: #c5142f;
+}
+.payment-button span {
+    font-family: Roboto, san;
+    font-size: 2rem;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+/* end cart payment section */
+
+/**** end main ****/
+
+/**** footer ****/
+footer {
+    width: 100%;
+    background-color: #004666;
+}
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* footer-left */
+.footer-left, .footer-middle, .footer-right {
+    width: 400px;
+}
+.footer-left {
+    width: 400px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.footer-logo {
+    width: 33%;
+    height: auto;
+}
+.hotline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.hotline-text {
+    color: #FFFFFF;
+}
+.hotline-number {
+    color: #FFC107;
+    font-size: 4rem;
+}
+/* end footer-left */
+
+/* footer-middle */
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+.office-list p{
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+.office-content, .contact-info-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.office-info, .office-name p {
+    color: #afaeae;
+}
+/* end footer-middle */
+
+/* footer-right */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.about-us-text p{
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+.about-us-link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.about-us-link a {
+    width: 10%;
+}
+/* end footer-right */
+/**** end footer ****/
+
+
+
+
+/* note: phải có các lệnh sau để tránh khoảng trắng footer:
+đẩy thằng footer xuống hẳn, tránh bị khoảng trắng:
+.main {
+    flex-grow: 1;
+}
+và
+body {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+Chiều cao tối thiểu của <body> bằng $100\%$ chiều cao của viewport
+buộc <body> phải kéo dài ít nhất bằng chiều cao màn hình, ngay cả khi nội dung bên trong nó (tức là <header>, <main>, <footer>) không đủ dài.
+*/
