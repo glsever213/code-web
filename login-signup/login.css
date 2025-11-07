@@ -21,6 +21,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url("./img-login-signup/background-all.jpg");
+    background-repeat: repeat;
 }
 p {
     color: #000000;
@@ -44,9 +46,20 @@ a {
     font-family: Roboto, san;
     border-bottom: 1px solid #004666;
 }
+.logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #FFFFFF;
+    z-index: 1;
+    border-radius: 100px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+}
 .logo-img{
     width: 100%;
     height: auto;
+    display: flex;
+    z-index: 2;
 }
 input {
     border-width: 0;
@@ -66,6 +79,7 @@ i {
 .home-logo {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 .logo {
     width: 150px;
@@ -84,6 +98,7 @@ i {
     border-radius: 8px;
     gap: 10px;
     padding: 20px 0;
+    background-color: #FFFFFF;
 }
 .login-form {
     width: 90%;

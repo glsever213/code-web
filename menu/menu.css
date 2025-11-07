@@ -18,8 +18,10 @@ html {
 }
 body {
     font-size: 1.6rem;
-    height: auto;
-    background-image: url("./img-home/background-all.jpg");
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(./img-menu/background-all.jpg);
 }
 p {
     color: #000000;
@@ -30,6 +32,10 @@ h1 {
     font-size: 2.2rem;
     font-family: "Oswald", sans-serif;
     font-weight: 500;
+}
+h3 {
+    font-size: 1.6rem;
+    font-family: "Oswald", sans-serif;
 }
 a, li {
     text-decoration: none;
@@ -43,6 +49,7 @@ a, li {
     z-index: 1;
     border-radius: 100px;
 }
+
 .logo-img, .user-img, .cart-img, .facebook-img, .twitter-img, .linkedin-img{
     width: 100%;
     height: auto;
@@ -101,140 +108,87 @@ a, li {
 /**** end Header ****/
 
 /**** main ****/
-/* promo section */
-.main {
-    width: 100%;
+main {
+    flex-grow: 1;
 }
-.promo {
-    width: 100%;
-    margin-bottom: 50px;
-}
-.promo-inner {
-    width: 100%;
-    position: relative;
-}
-.radio {
+/* xử lý tab: */
+input[type="radio"] {
     display: none;
 }
 
-.promo-slide {
-    position: relative;
-    width: 100%;
+/* Ẩn tất cả các nội dung tab mặc định */
+.tab-content {
+    display: none;
+    padding-top: 20px;
 }
-.promo-slide article {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-.promo-slide article img {
-    width: 100%;
-    height: auto;
+/*tab_pizza được chọn, hiển thị nội dung Pizza */
+#tab_pizza:checked ~ .tab-content-list .pizza-content {
     display: block;
 }
 
-/* Hiển thị slide khi radio được check*/
-#promo1:checked ~ .promo-slide .promo1,
-#promo2:checked ~ .promo-slide .promo2,
-#promo3:checked ~ .promo-slide .promo3 {
-    opacity: 1;
-    visibility: visible;
-    position: relative;
+/*tab_ga được chọn, hiển thị nội dung Gà */
+#tab_ga:checked ~ .tab-content-list .ga-content {
+    display: block;
 }
 
-
-/* dots */
-.select-item {
-    width: 100%;
-    /* text-align: center; */
-    margin-top: 10px;
+.tab-header-list {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    border-bottom: 2px solid #ccc; /* hr chung*/
 }
 
-.dots {
-    display: inline-block;
-    padding: 6px;
-    background-color: #dddbdb;
-    border-radius: 50px;
-    transition: background-color 0.3s;
+.tab-header {
     cursor: pointer;
+    padding: 10px 20px;
+    margin-right: 15px;
+    color: #afaeae;
+    font-weight: 500;
+    position: relative;
+    top: 2px;
+    transition: color 0.3s;
 }
-
-/* dots active */
-#promo1:checked ~ .select-item label[for="promo1"] > .dots,
-#promo2:checked ~ .select-item label[for="promo2"] > .dots,
-#promo3:checked ~ .select-item label[for="promo3"] > .dots {
-    background-color: #004666;;
-
-}
-
-/* arrow */
-.promo-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-90%);
-    color: #fff;
-    font-size: 40px;
-    cursor: pointer;
+#tab_pizza:checked ~ .tab-header-list .tab-header[for="tab_pizza"],
+#tab_ga:checked ~ .tab-header-list .tab-header[for="tab_ga"] {
+    color: #000000;
+    font-weight: bold;
+    border-bottom: 3px solid #004666;
     z-index: 1;
-    user-select: none;
-    transition: 0.3s;
-    display: none; /* ẨN TẤT CẢ MŨI TÊN MẶC ĐỊNH */
 }
+ /* end xử lý tab: */
 
-.promo-arrow:hover {
-    color: #004666;
-}
-
-/* set up arrow */
-.promo-arrow[class*="prev"] {
-    left: 20px;
-}
-.promo-arrow[class*="next"] {
-    right: 20px;
-}
-
-/* Slide 1 Active: Chỉ hiện mũi tên Next (chuyển sang promo2) */
-#promo1:checked ~ .promo-prev-1,
-#promo1:checked ~ .promo-next-1 {
-    display: block;
-}
-
-/* Slide 2 Active: Hiện Prev (về 1) và Next (sang 3) */
-#promo2:checked ~ .promo-prev-2,
-#promo2:checked ~ .promo-next-2 {
-    display: block;
-}
-
-/* Slide 3 Active: Hiện Prev (về 2) và Next (về 1) */
-#promo3:checked ~ .promo-prev-3,
-#promo3:checked ~ .promo-next-3 {
-    display: block;
-}
-/* end promo section */
-
-/* menu section */
-.menu-section {
-    width: 100%;
-    margin-bottom: 100px;
-}
-.menu-section-inner {
+.menu-container {
+    width: 90%;
     max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
+    font-family: roboto, sans-serif;
 }
-.menu-section-header {
-    margin-bottom: 20px;
+
+.content-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #333;
 }
-hr {
-    background-color: #FFFFFF;
-    opacity: 0.4;
-    margin-top: 10px;
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
+
+/* .product-item {
+    width: 280px;
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+} */
+
+
+
 .menu-list {
     display: flex;
     flex-wrap: wrap;
@@ -268,20 +222,139 @@ hr {
 
 .menu-item-title {
     padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 87px;
 }
-.menu-item-title a{
+.product-name {
     color: #000000;
     font-family: Roboto, sans-serif;
     font-size: 1.6rem;
     font-weight: 500;
+    transition: color 0.3s;
 }
-.menu-item-title a:hover{
+.product-name:hover {
     color: #004666;
-
 }
-/* end menu section */
+.product-price{
+    color: #004666;
+    font-family: Roboto, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
 
+.menu-item-buy{
+    width: 100%;
+}
+.add-to-cart {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    padding: 7px;
+    background-color: #004666;
+    color: #FFFFFF;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+}
+
+
+
+/* popup sản phẩm chi tiết (item) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 63, 63, 0.5);
+    z-index: 11;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Hiển thị popup */
+.modal-overlay.active {
+    display: flex;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+.popup-inner-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.popup-inner-content h2 {
+    font-family: Oswald, sans-serif;
+    color: #004666;
+    margin-bottom: 15px;
+}
+.add-to-cart-popup {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: #004666;
+    font-size: 1.6rem;
+    font-family: roboto, sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+#popup-product-price {
+    color: #004666;
+    font-family: Roboto, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.quantity-control {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+.quantity-button {
+    display: flex;
+    width: 20%;
+    text-align: right;
+    border: 1px solid #004666;
+}
+.quantity-button input {
+    width: 100%;
+    text-align: center;
+    border-width: 0;
+}
+.qty-btn {
+    padding: 5px 12px;
+    background-color: #004666;
+    color: #FFFFFF;
+    font-weight: 200;
+    border-width: 0;
+    font-family: roboto, sans-serif;
+}
 /**** end main ****/
+
 /**** footer ****/
 footer {
     width: 100%;

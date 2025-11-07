@@ -19,6 +19,7 @@ html {
 body {
     font-size: 1.6rem;
     height: auto;
+    background-image: url("./img-about-us/background-all.jpg");
 }
 p {
     color: #afaeae;
@@ -38,12 +39,19 @@ a, li {
 .logo {
     width: 12%;
     height: auto;
+    display: flex;
+    background-color: #FFFFFF;
+    z-index: 1;
+    border-radius: 100px;
 }
 .logo-img, .user-img, .cart-img, .facebook-img, .twitter-img, .linkedin-img{
     width: 100%;
     height: auto;
 }
-
+.logo-img{
+    display: flex;
+    z-index: 2;
+}
 /**** Header ****/
 .header {
     background-color: #004666;
@@ -54,6 +62,7 @@ a, li {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    padding: 15px 0;
 }
 
 /* nav left */
@@ -179,10 +188,15 @@ footer {
     display: flex;
     justify-content: left;
     align-items: center;
+    gap: 10px;
 }
 .footer-logo {
     width: 33%;
     height: auto;
+    display: flex;
+    background-color: #FFFFFF;
+    z-index: 1;
+    border-radius: 100px;
 }
 .hotline {
     display: flex;
