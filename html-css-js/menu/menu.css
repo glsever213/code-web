@@ -352,6 +352,7 @@ input[type="radio"] {
     font-weight: 200;
     border-width: 0;
     font-family: roboto, sans-serif;
+    cursor: pointer;
 }
 /**** end main ****/
 
